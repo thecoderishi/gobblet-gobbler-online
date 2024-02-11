@@ -1,0 +1,94 @@
+:root {
+    --bodyColor: #545454;
+    --bgColor: #14bdac;
+    --textColorPrimary: #f2ebd3;
+    --textColorSecondary: #b1c2c0;
+    --winColor: #545454;
+    --xSymbol: #e5eec1;
+    --oSymbol: #a2d5ac;
+}
+
+.switch-container {
+    display: flex;
+    margin: 5px 0px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 0px 5px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--bgColor);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.joinRoom {
+    height: 38px;
+    margin: 5px 0px;
+    border: 1px solid var(--bgColor);
+    border-radius: 5px;
+}
+
+.button {
+    padding: 10px;
+    background-color: var(--bgColor);
+    color: var(--textColorPrimary);
+    border: 1px solid var(--textColorPrimary);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.room-details {
+    padding: 0px 25px;
+}
