@@ -25,7 +25,7 @@ const App = () => {
   const [userSymbol, setUserSymbol] = useState('')
 
   useEffect(() => {
-    const socket = io("http://localhost:3000")
+    const socket = io("https://tic-tac-toe-backend-snowy.vercel.app/")
     socket.on("connect", () => {
       console.log(socket.id)
     })
