@@ -25,7 +25,7 @@ const App = () => {
   const [userSymbol, setUserSymbol] = useState('')
 
   useEffect(() => {
-    const socket = io("https://tic-tac-toe-backend-snowy.vercel.app/")
+    const socket = io("https://tic-tac-toe-backend-snowy.onrender.com/")
     socket.on("connect", () => {
       console.log(socket.id)
     })
